@@ -1,1 +1,1 @@
-json.partial! "trans/tran", tran: @tran
+json.partial! 'trans/tran', tran: @tran
