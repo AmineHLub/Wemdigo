@@ -1,0 +1,2 @@
+class Tran < ApplicationRecord
+end
