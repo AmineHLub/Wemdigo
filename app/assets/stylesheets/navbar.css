@@ -28,7 +28,3 @@ button.nav-link {
   height: 50px;
   border: none;
 }
-
-button.nav-link:hover {
-  background-color: rgb(3, 3, 3);
-}
