@@ -1,9 +1,11 @@
-<div id="<%= dom_id category %>">
-  <p>
-    <strong>Name:</strong>
-    <%= category.name %>
-  </p>
-
+<div class="description-container" id="<%= dom_id category %>">
+<div class="self-info">
   <%= image_tag(category.cat_image) %>
-
+    <div class="mid-info">
+     <p><%= category.name %></p>
+     <span> <%= category.created_at.strftime('%d %b %Y') %></span>
+    </div>
+  </div>
+  <p class="amount-info">11.5$
+  </p>
 </div>
