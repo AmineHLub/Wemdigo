@@ -1,10 +1,12 @@
-<h1>Editing category</h1>
-
+<navbar class="navbar">
+    <ul>
+    <%= link_to categories_path, class: "back-btn" do%>
+    <%= image_tag("back.png") %>
+    <%end%>
+    <p class="navbar-type">EDIT CATEGORY</p>
+        <%= link_to destroy_user_session_path, :method => :delete do %>
+      <%= image_tag("logout.png") %>
+    <% end %>
+    </ul>
+</navbar>
 <%= render "form", category: @category %>
-
-<br>
-
-<div>
-  <%= link_to "Show this category", @category %> |
-  <%= link_to "Back to categories", categories_path %>
-</div>

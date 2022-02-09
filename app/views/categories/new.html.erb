@@ -1,3 +1,14 @@
+<navbar class="navbar">
+    <ul>
+    <%= link_to categories_path, class: "back-btn" do%>
+    <%= image_tag("back.png") %>
+    <%end%>
+    <p class="navbar-type">CREATE CATEGORY</p>
+        <%= link_to destroy_user_session_path, :method => :delete do %>
+      <%= image_tag("logout.png") %>
+    <% end %>
+    </ul>
+</navbar>
 <h1>New category</h1>
 
 <%= render "form", category: @category %>
