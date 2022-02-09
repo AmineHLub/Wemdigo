@@ -8,6 +8,9 @@
   </ul>
 </navbar>
   <%= render partial: "layouts/burger" %>
+  <% if @categories.empty?%>
+    <p class="no-cats"> No categories added yet! </p>
+  <%end%>
 <% @categories.each do |category| %>
 <div id="categories">
   <%= link_to category do %>

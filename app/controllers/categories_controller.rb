@@ -14,6 +14,7 @@ class CategoriesController < ApplicationController
   def create
     @category = Category.new(category_params)
     @category.user_id = current_user.id
+    @category.total = 0
     respond_to do |format|
       if @category.save
         format.html { redirect_to category_url(@category), notice: 'Category was successfully created.' }
