@@ -30,6 +30,7 @@ button.nav-link {
 }
 
 .navbar > ul > .login-button {
+  cursor: pointer;
   border: none;
   background-color: transparent;
   color: white;

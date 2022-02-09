@@ -63,3 +63,39 @@
   text-align: center;
   font-size: 1.5rem;
 }
+
+.category-form,
+.category-form > div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.label-file > p {
+  margin: 0 2% 0 2%;
+  background-color: rgb(151, 20, 20);
+  border-radius: 8px;
+  color: white;
+  padding: 5px 3px;
+}
+
+.category-form > div > p {
+  margin: 5px;
+}
+
+.category-form > div > input {
+  height: 34px;
+  font-size: 1.5rem;
+}
+
+.label-file {
+  cursor: pointer;
+  padding: 5px 0;
+  border: 1px solid gray;
+  display: flex;
+  align-items: center;
+}
+
+.input-file {
+  display: none;
+}
