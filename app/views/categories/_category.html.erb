@@ -1,6 +1,10 @@
 <div class="description-container" id="<%= dom_id category %>">
 <div class="self-info">
+  <% if category.cat_image.attached? %>
   <%= image_tag(category.cat_image) %>
+  <% else%>
+  <%= image_tag('default_no_img.png')%> 
+  <%end%>
     <div class="mid-info">
      <p><%= category.name %></p>
      <span> <%= category.created_at.strftime('%d %b %Y') %></span>
