@@ -28,3 +28,16 @@ button.nav-link {
   height: 50px;
   border: none;
 }
+
+.navbar > ul > .login-button {
+  border: none;
+  background-color: transparent;
+  color: white;
+  padding: 0;
+  font-size: 1.2rem;
+}
+
+.navbar > ul > .navbar-type {
+  color: white;
+  font-size: 1.2rem;
+}

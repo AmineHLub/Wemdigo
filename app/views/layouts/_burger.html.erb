@@ -7,3 +7,16 @@
     <li>Exit</li>
   </ul>
 </div>
+
+
+<script>
+function openBurger() {
+  document.querySelector(".burger-fixed-container").classList.remove('closed')
+}
+
+function closeBurger() {
+  document.querySelector(".burger-fixed-container").classList.add('closed')
+}
+document.querySelector(".burger-btn").addEventListener('click', openBurger)
+document.querySelector(".close-hamburger-btn").addEventListener('click', closeBurger)
+</script>

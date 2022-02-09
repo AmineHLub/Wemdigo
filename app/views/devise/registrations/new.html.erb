@@ -1,35 +1,30 @@
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name), data: { turbo: false }, html: { class: "login-form"}) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
-  <div class="field">
-  <%= f.label :name %><br />
-  <%= f.text_field :name, autofocus: true, class: "text-box" %>
-  </div>
+<navbar class="navbar">
+    <ul>
+    <%= link_to unauthenticated_root_path, class: "back-btn" do%>
+    <%= image_tag("back.png") %>
+    <%end%>
+    <p class="navbar-type">Signup</p>
+    <input type="submit" name="commit" value="Signup" class="login-button" form="sign-up-form" data-disable-with="Sign Up">
+    </ul>
+</navbar>
 
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name), data: { turbo: false }, html: { class: "login-form", id: "sign-up-form"}) do |f| %>
+  
   <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "text-box" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password", class: "text-box" %>
+  <%= f.text_field :name, autofocus: true, class: "text-box", placeholder: "Name", required: true %>
   </div>
 
   <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "text-box" %>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "text-box", placeholder: "Email", required: true %>
   </div>
 
-  <%= f.hidden_field :posts_counter, :value => 0 %>
-
-  <div class="actions">
-    <%= f.submit "Sign up", class: "login-button" %>
+  <div class="field">
+    <%= f.password_field :password, autocomplete: "new-password", class: "text-box", placeholder: "Password", required: true %>
   </div>
 
-  <%= render "devise/shared/links" %>
+  <div class="field">
+    <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "text-box", placeholder: "Confirm password", required: true %>
+  </div>
 <% end %>
 
-
+<%= render "devise/shared/error_messages", resource: resource %>
