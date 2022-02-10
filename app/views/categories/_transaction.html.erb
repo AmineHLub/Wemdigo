@@ -1,0 +1,18 @@
+<%@transactions.each do |transaction| %>
+<div id="<%= dom_id transaction %>">
+
+  <p>
+    <strong>Amount:</strong>
+    <%= transaction.amount %>
+  </p>
+
+  <p>
+    <strong>name:</strong>
+    <%= transaction.name %>
+  </p>
+</div>
+
+<div>
+<%= button_to "Logout", category_tranzaction_path(@category.id, transaction.id), :method => :delete %>
+</div>
+<%end%>
