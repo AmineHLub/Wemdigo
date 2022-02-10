@@ -11,7 +11,7 @@
   <% end %>
 
   <div>
-    <%= form.text_field :name, required: true %>
+    <%= form.text_field :name, required: true, placeholder: "Name" %>
   </div>
 
   <div>
@@ -28,6 +28,7 @@
   document.querySelector('#file').addEventListener("change", (e) => {
   document.querySelector('.label-file > span').innerText = e.target.files[0].name;
   document.querySelector('.label-file > p').style.backgroundColor = "green";
+  document.querySelector('.label-file > p').innerText = "Selected ✓"
   })
 </script>
 
