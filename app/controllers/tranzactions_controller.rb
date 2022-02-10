@@ -1,10 +1,6 @@
 class TranzactionsController < ApplicationController
   before_action :set_tranzaction, only: %i[show edit update destroy]
 
-  def index
-    @tranzactions = Tranzaction.all
-  end
-
   def show; end
 
   def new
@@ -15,31 +11,29 @@ class TranzactionsController < ApplicationController
 
   def create
     @tranzaction = Tranzaction.new(tranzaction_params)
-
+    @tranzaction.user_id = current_user.id
+    @tranzaction.save!
+    @full_tran = @tranzaction.categories_tranzactions.create!(category_id: params[:category_id])
+    @adding_to_cat = Category.find(@full_tran.category_id)
+    @adding_to_cat.total += @tranzaction.amount
     respond_to do |format|
-      if @tranzaction.save
-        format.html { redirect_to tranzaction_url(@tranzaction), notice: 'Tranzaction was successfully created.' }
+      if @full_tran.save
+        format.html do
+          @adding_to_cat.save
+          redirect_to category_url(@full_tran.category_id),
+                      notice: 'Tranzaction was successfully created.'
+        end
       else
         format.html { render :new, status: :unprocessable_entity }
       end
     end
   end
 
-  def update
-    respond_to do |format|
-      if @tranzaction.update(tranzaction_params)
-        format.html { redirect_to tranzaction_url(@tranzaction), notice: 'Tranzaction was successfully updated.' }
-      else
-        format.html { render :edit, status: :unprocessable_entity }
-      end
-    end
-  end
-
   def destroy
+    @tranzaction.categories_tranzactions.find(params[:id]).destroy
     @tranzaction.destroy
-
     respond_to do |format|
-      format.html { redirect_to tranzactions_url, notice: 'Tranzaction was successfully destroyed.' }
+      format.html { redirect_to category_url(params[:category_id]), notice: 'Tranzaction was successfully destroyed.' }
     end
   end
 
@@ -52,6 +46,6 @@ class TranzactionsController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def tranzaction_params
-    params.require(:tranzaction).permit(:name, :amount, :category_id, :splash_id)
+    params.require(:tranzaction).permit(:name, :amount)
   end
 end
