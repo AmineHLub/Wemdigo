@@ -1,0 +1,31 @@
+.transaction-container {
+  width: 95%;
+  margin: 10px 1.5%;
+  padding: 1%;
+  border: 1px solid gray;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+}
+
+.transaction-container > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.transaction-header-info {
+  width: 75%;
+  margin-left: 5%;
+}
+
+.transaction-header-info > h2 {
+  margin: 0;
+}
+
+.transaction-container > form > button {
+  cursor: pointer;
+  border: none;
+  padding: 0;
+  background-color: transparent;
+}

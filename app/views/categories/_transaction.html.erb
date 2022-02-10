@@ -1,18 +1,24 @@
 <%@transactions.each do |transaction| %>
 <div id="<%= dom_id transaction %>">
 
-  <p>
-    <strong>Amount:</strong>
-    <%= transaction.amount %>
-  </p>
+<div class="transaction-container">
 
-  <p>
-    <strong>name:</strong>
-    <%= transaction.name %>
-  </p>
+  <%= button_to category_tranzaction_path(@category.id, transaction.id), method: :delete do %>
+    <%= image_tag("delete.png") %>
+  <%end%>
+
+  <div class="transaction-header-info">
+    <h2><%= transaction.name %></h2>
+    <span> <%= transaction.created_at.strftime('%d %b %Y') %></span>
+  </div>
+
+  <div class="transaction-amount-info">
+  <p><strong><%= transaction.amount %> $</strong></p>
+  </div>
+
+
+
+
 </div>
 
-<div>
-<%= button_to "Logout", category_tranzaction_path(@category.id, transaction.id), :method => :delete %>
-</div>
 <%end%>
