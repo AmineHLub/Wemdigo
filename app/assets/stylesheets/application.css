@@ -14,9 +14,12 @@
  *= require_self
  */
 
+@import url(//db.onlinewebfonts.com/c/0376a58122a881d16a294512d3c947b1?family=ProximaNova-Regular);
+
 body {
   margin: 0;
   padding: 0;
+  font-family: 'proxima-nova', sans-serif;
 }
 
 a {
