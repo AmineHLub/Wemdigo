@@ -1,23 +1,29 @@
-<%= form_for(resource, as: resource_name, url: session_path(resource_name), data: { turbo: false }, html: { class: "login-form"}) do |f| %>
+<navbar class="navbar">
+    <ul>
+    <%= link_to unauthenticated_root_path, class: "back-btn" do%>
+    <%= image_tag("back.png") %>
+    <%end%>
+    <p class="navbar-type">LOGIN</p>
+    <input type="submit" name="commit" value="Login" class="login-button" form="sign-in-form" data-disable-with="Log in">
+    </ul>
+</navbar>
+
+<%= form_for(resource, as: resource_name, url: session_path(resource_name), data: { turbo: false }, html: { class: "login-form", id: "sign-in-form"}) do |f| %>
   <div class="field">
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" ,placeholder: "Email", class: "text-box" %>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email" ,placeholder: "Email", class: "text-box", required: true %>
   </div>
 
   <div class="field">
-    <%= f.password_field :password, autocomplete: "current-password", placeholder: "Password", class: "text-box" %>
+    <%= f.password_field :password, autocomplete: "current-password", placeholder: "Password", class: "text-box", required: true %>
   </div>
 
   <% if devise_mapping.rememberable? %>
-    <div class="field">
+    <div class="field container-remember-me">
       <%= f.check_box :remember_me %>
       <%= f.label :remember_me %>
     </div>
   <% end %>
-
-  <div class="actions">
-    <%= f.submit "Log in", class: "login-button" %>
-  </div>
-  <%= render "devise/shared/links" %>
-
 <% end %>
 
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>

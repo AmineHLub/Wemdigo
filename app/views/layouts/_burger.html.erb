@@ -1,0 +1,22 @@
+<div class="burger-fixed-container closed">
+  <a class="close-hamburger-btn">X</a>
+  <ul>
+    <li>Home</li>
+    <li>Categories</li>
+    <li>All Transactions</li>
+    <li>Exit</li>
+  </ul>
+</div>
+
+
+<script>
+function openBurger() {
+  document.querySelector(".burger-fixed-container").classList.remove('closed')
+}
+
+function closeBurger() {
+  document.querySelector(".burger-fixed-container").classList.add('closed')
+}
+document.querySelector(".burger-btn").addEventListener('click', openBurger)
+document.querySelector(".close-hamburger-btn").addEventListener('click', closeBurger)
+</script>

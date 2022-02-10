@@ -1,6 +1,6 @@
 class CategoriesController < ApplicationController
   before_action :set_category, only: %i[show edit update destroy]
-
+  before_action :authenticate_user!
   def index
     @categories = Category.all
   end
@@ -14,6 +14,7 @@ class CategoriesController < ApplicationController
   def create
     @category = Category.new(category_params)
     @category.user_id = current_user.id
+    @category.total = 0
     respond_to do |format|
       if @category.save
         format.html { redirect_to category_url(@category), notice: 'Category was successfully created.' }
