@@ -1,13 +1,10 @@
 class TranzactionsController < ApplicationController
   before_action :set_tranzaction, only: %i[show edit update destroy]
-
-  def show; end
+  before_action :authenticate_user!
 
   def new
     @tranzaction = Tranzaction.new
   end
-
-  def edit; end
 
   def create
     @tranzaction = Tranzaction.new(tranzaction_params)
