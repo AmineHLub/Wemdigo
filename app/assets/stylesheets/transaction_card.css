@@ -2,7 +2,7 @@
   width: 95%;
   margin: 10px 1.5%;
   padding: 1%;
-  border: 1px solid gray;
+  border: 1px solid #434b54;
   border-radius: 3px;
   display: flex;
   align-items: center;
@@ -15,7 +15,7 @@
 }
 
 .transaction-header-info {
-  width: 75%;
+  width: 70%;
   margin-left: 5%;
 }
 
