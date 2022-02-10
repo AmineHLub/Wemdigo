@@ -10,7 +10,7 @@
 .edit-delete-cat > form > button > img {
   height: 25px;
   cursor: pointer;
-  border: 1px solid gray;
+  border: 1px solid #434b54;
   border-radius: 50%;
   padding: 5px;
 }

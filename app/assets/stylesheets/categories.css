@@ -1,14 +1,14 @@
 #categories {
   padding: 10px 15px;
   margin: 10px 2%;
-  border: 1px solid gray;
+  border: 1px solid #434b54;
   border-radius: 5px;
 }
 
 .description-container {
   display: flex;
   justify-content: space-between;
-  color: black;
+  color: #434b54;
 }
 
 .self-info {
@@ -21,7 +21,7 @@
 }
 
 .mid-info {
-  color: rgb(114, 114, 114);
+  color: #434b54;
   margin-left: 10px;
   display: flex;
   flex-direction: column;
@@ -42,9 +42,9 @@
 .new-cat-btn {
   position: fixed;
   bottom: 0;
-  height: 60px;
+  height: 70px;
   width: 100%;
-  background-color: rgb(23, 83, 46);
+  background-color: #5fb523;
   color: white;
   text-align: center;
   display: flex;
@@ -54,10 +54,10 @@
 
 .new-cat-btn > p {
   border: 2px solid white;
-  border-radius: 5px;
+  border-radius: 3px;
   width: 90%;
   margin: 0;
-  padding: 10px 0;
+  padding: 15px 0;
 }
 
 .no-cats {
@@ -85,14 +85,14 @@
 }
 
 .category-form > div > input {
-  height: 34px;
+  height: 33px;
   font-size: 1.5rem;
 }
 
 .label-file {
   cursor: pointer;
   padding: 5px 0;
-  border: 1px solid gray;
+  border: 1px solid #434b54;
   display: flex;
   align-items: center;
 }

@@ -2,11 +2,11 @@ class CategoriesController < ApplicationController
   before_action :set_category, only: %i[show edit update destroy]
   before_action :authenticate_user!
   def index
-    @categories = Category.all
+    @categories = current_user.categories
   end
 
   def show
-    @transactions = @category.tranzactions
+    @transactions = @category.tranzactions.order(created_at: :desc)
   end
 
   def new
@@ -52,7 +52,7 @@ class CategoriesController < ApplicationController
 
   # Use callbacks to share common setup or constraints between actions.
   def set_category
-    @category = Category.find(params[:id])
+    @category = current_user.categories.find(params[:id])
   end
 
   # Only allow a list of trusted parameters through.
