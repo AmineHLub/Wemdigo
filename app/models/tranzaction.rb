@@ -1,4 +1,5 @@
 class Tranzaction < ApplicationRecord
-  has_and_belongs_to_many :categories
+  has_many :categories_tranzactions, dependent: :delete_all
+  has_many :categories, through: :categories_tranzactions
   belongs_to :user
 end
