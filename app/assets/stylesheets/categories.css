@@ -54,6 +54,7 @@
 
 .new-cat-btn > p {
   border: 2px solid white;
+  border-radius: 5px;
   width: 90%;
   margin: 0;
   padding: 10px 0;
@@ -98,4 +99,9 @@
 
 .input-file {
   display: none;
+}
+
+#categories-show {
+  padding-bottom: 10px;
+  border-bottom: 1px solid black;
 }

@@ -10,7 +10,7 @@
     </ul>
 </navbar>
 
-<div id="categories">
+<div id="categories-show">
   <div class="description-container" id="<%= dom_id @category %>">
     <div class="self-info">
         <% if @category.cat_image.attached? %>
@@ -21,6 +21,7 @@
       <div class="mid-info">
         <p><%= @category.name %></p>
         <span> <%= @category.created_at.strftime('%d %b %Y') %></span>
+        <span><strong> <%= @category.total %> $</strong></span>
       </div>
     </div>
     <div class="edit-delete-cat">
@@ -33,3 +34,11 @@
     </div>
   </div>
 </div>
+
+<%= link_to new_category_tranzaction_path(@category.id), class: "new-cat-btn" do%>
+<p>Add a new transaction</p>
+<%end%>
+
+<%= render partial: "transaction", local: @transaction %>
+
+
