@@ -3,5 +3,5 @@
 <%= render @tranzaction %>
 
 <div>
-<%=button_to 'Delete', {:controller => :tranzactions, :action => 'destroy', :id => @tranzaction.id}, :method => :delete%>
+<%=button_to 'Delete', {:controller => :tranzactions, :action => 'destroy', :id => params[:id]}, :method => :delete%>
 </div>

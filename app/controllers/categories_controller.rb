@@ -37,6 +37,9 @@ class CategoriesController < ApplicationController
   def edit; end
 
   def destroy
+    @category.categories_tranzactions.each do |transaction|
+      Tranzaction.find(transaction.tranzaction_id).destroy
+    end
     @category.destroy
     respond_to do |format|
       format.html { redirect_to categories_url, notice: 'Category was successfully destroyed.' }

@@ -30,9 +30,11 @@ class TranzactionsController < ApplicationController
   end
 
   def destroy
-    @tranzaction.categories_tranzactions.find(params[:id]).destroy
+    @deleting_from_cat = Category.find(params[:category_id])
+    @deleting_from_cat.total -= @tranzaction.amount
     @tranzaction.destroy
     respond_to do |format|
+      @deleting_from_cat.save
       format.html { redirect_to category_url(params[:category_id]), notice: 'Tranzaction was successfully destroyed.' }
     end
   end
