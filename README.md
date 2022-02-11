@@ -7,8 +7,9 @@
 - Ruby
 - RoR
 
+
 ## Live Demo
-- [Click Me!](https://desolate-stream-21599.herokuapp.com/)
+- [Click Me!](https://warm-fortress-20781.herokuapp.com/)
 
 - PS : Heroku is not the best to host a RoR app, it's better that you'd clone the project and follow
 the instructions below for better experience.
@@ -43,11 +44,6 @@ Run rspec spec/integration for integration tests
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/mohamed-amine-hajltaief-b18863163/)
 
 ## 🤝 Contributing
-- Microverse
-
-- [Gregoire Vella on Behance](https://www.behance.net/gregoirevella)
-
-  - [Her design](https://www.behance.net/gallery/19759151/Snapscan-iOs-design-and-branding?tracking_source=)
 
 Contributions, issues, and feature requests are welcome!
 
@@ -59,9 +55,12 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+- Microverse
+
+- [Gregoire Vella on Behance](https://www.behance.net/gregoirevella)
+
+  - [Her design](https://www.behance.net/gallery/19759151/Snapscan-iOs-design-and-branding?tracking_source=)
+
 
 ## 📝 License
 
