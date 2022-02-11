@@ -11,9 +11,6 @@
 ## Live Demo
 - [Click Me!](https://warm-fortress-20781.herokuapp.com/)
 
-- PS : Heroku is not the best to host a RoR app, it's better that you'd clone the project and follow
-the instructions below for better experience.
-
 ## Getting Started
 
 - Run git clone git@github.com:AmineHLub/Wemdigo.git to get a local clone
