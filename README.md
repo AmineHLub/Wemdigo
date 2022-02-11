@@ -13,7 +13,7 @@
 
 ## Getting Started
 
-- Run git clone git@github.com:AmineHLub/Wemdigo.git to get a local clone
+- Run `git clone git@github.com:AmineHLub/Wemdigo.git` to get a local clone
 
 ### Prerequisites
 
