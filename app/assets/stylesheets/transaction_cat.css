@@ -1,0 +1,29 @@
+.edit-delete-cat {
+  align-self: center;
+  font-size: large;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.edit-delete-cat > a > img,
+.edit-delete-cat > form > button > img {
+  height: 25px;
+  cursor: pointer;
+  border: 1px solid #434b54;
+  border-radius: 50%;
+  padding: 5px;
+}
+
+.edit-delete-cat > form > button {
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+
+.edit-delete-cat > a > img:hover,
+.edit-delete-cat > form > button > img:hover {
+  filter: invert(100);
+  border: 1px solid rgb(223, 223, 223);
+  background-color: rgb(223, 223, 223);
+}

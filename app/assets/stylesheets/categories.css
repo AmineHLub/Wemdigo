@@ -1,0 +1,107 @@
+#categories {
+  padding: 10px 15px;
+  margin: 10px 2%;
+  border: 1px solid #434b54;
+  border-radius: 5px;
+}
+
+.description-container {
+  display: flex;
+  justify-content: space-between;
+  color: #434b54;
+}
+
+.self-info {
+  display: flex;
+}
+
+.self-info > img {
+  height: 80px;
+  width: 80px;
+}
+
+.mid-info {
+  color: #434b54;
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.mid-info > p {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.amount-info {
+  align-self: center;
+  font-size: large;
+}
+
+.new-cat-btn {
+  position: fixed;
+  bottom: 0;
+  height: 70px;
+  width: 100%;
+  background-color: #5fb523;
+  color: white;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.new-cat-btn > p {
+  border: 2px solid white;
+  border-radius: 3px;
+  width: 90%;
+  margin: 0;
+  padding: 15px 0;
+}
+
+.no-cats {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.category-form,
+.category-form > div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.label-file > p {
+  margin: 0 2% 0 2%;
+  background-color: rgb(151, 20, 20);
+  border-radius: 8px;
+  color: white;
+  padding: 5px 3px;
+}
+
+.category-form > div > p {
+  margin: 5px;
+}
+
+.category-form > div > input {
+  height: 33px;
+  font-size: 1.5rem;
+}
+
+.label-file {
+  cursor: pointer;
+  padding: 5px 0;
+  border: 1px solid #434b54;
+  display: flex;
+  align-items: center;
+}
+
+.input-file {
+  display: none;
+}
+
+#categories-show {
+  padding-bottom: 10px;
+  border-bottom: 1px solid black;
+}

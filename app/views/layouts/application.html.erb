@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Wemdigo</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag 'application','https://fonts.googleapis.com/css2?family=Lobster&display=swap',
+    media: 'all', 'data-turbolinks-track' => true %>
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body>
+ <% if user_signed_in? %>
+  <main>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+    <%= yield %>
+  </main>
+  <% else %>
+  <div class="splash">
+  <%= yield %>
+  </div>
+  <%end%>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+<navbar class="navbar">
+  <ul>
+    <a class="burger-btn"><%= image_tag("hamburger.png") %></a>
+    <p class="navbar-type">CATEGORIES</p>
+    <%= link_to destroy_user_session_path, :method => :delete do %>
+      <%= image_tag("logout.png") %>
+    <% end %>
+  </ul>
+</navbar>
+  <%= render partial: "layouts/burger" %>
+  <% if @categories.empty?%>
+    <p class="no-cats"> No categories added yet! </p>
+  <%end%>
+<% @categories.each do |category| %>
+<div id="categories">
+  <%= link_to category do %>
+    <%= render category %>
+    <% end %>
+</div>
+  <% end %>
+
+<%= link_to new_category_path, class: "new-cat-btn" do%>
+<p>New category</p>
+<%end%>

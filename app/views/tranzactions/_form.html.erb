@@ -1,0 +1,10 @@
+<%= form_with url: category_tranzactions_path(params[:category_id]), id:"transaction-form", scope: :tranzaction do |form| %>
+
+  <div >
+    <%= form.text_field :name, placeholder: "Name", required: true %>
+  </div>
+
+  <div>
+    <%= form.number_field :amount, placeholder: "Amount", required: true %>
+  </div>
+<% end %>

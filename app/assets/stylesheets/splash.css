@@ -1,0 +1,87 @@
+.splash {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -10;
+  background: rgb(166, 204, 192);
+  background: linear-gradient(to bottom, rgba(55, 120, 194, 1) 0%, rgba(107, 187, 162, 1)  60%, rgba(95, 133, 120, 0.349) 95%, rgba(95, 133, 120, 0.13) 100%);
+}
+
+.splash-container {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 80% repeat(2, 10%);
+}
+
+.header-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Lobster', cursive;
+  color: whitesmoke;
+}
+
+.splash-container > form {
+  height: 100%;
+  margin: 0 5% 20px 5%;
+}
+
+.splash-btns {
+  height: 80%;
+  width: 100%;
+  cursor: pointer;
+  border: 1px solid transparent;
+  color: white;
+  font-weight: bolder;
+  background-color: rgba(55, 120, 194, 1);
+}
+
+.splash-signup {
+  background-color: transparent;
+  border: 1px solid #434b54;
+  color: rgb(87, 87, 87);
+}
+
+/* forms */
+
+.splash > form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px;
+}
+
+.splash > form > div {
+  width: 95%;
+}
+
+.splash > form > div > input,
+.splash > form > div > .field_with_errors > input {
+  height: 50px;
+  width: 98%;
+  font-size: 1.2rem;
+  padding: 5px 0 5px 2%;
+  margin-bottom: 10px;
+  border: none;
+}
+
+.splash > form > div > input:focus {
+  outline: none;
+}
+
+#user_remember_me {
+  height: 30px;
+  width: 30px;
+}
+
+.container-remember-me {
+  display: flex;
+  align-items: center;
+  color: white;
+  font-weight: 800;
+}

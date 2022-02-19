@@ -1,0 +1,9 @@
+    <navbar class="navbar">
+    <ul>
+    <a class="burger-btn"><%= image_tag("hamburger.png") %></a>
+    <p class="navbar-type">Categories</p>
+    <%= link_to destroy_user_session_path, :method => :delete do %>
+      <%= image_tag("logout.png") %>
+    <% end %>
+    </ul>
+    </navbar>

@@ -1,0 +1,13 @@
+<navbar class="navbar">
+    <ul>
+    <%= link_to categories_path, class: "back-btn" do%>
+    <%= image_tag("back.png") %>
+    <%end%>
+    <p class="navbar-type">NEW CATEGORY</p>
+     <input type="submit" name="commit" value="Save" class="login-button new-edit-cat" form="category-form" data-disable-with="Log in">
+    </ul>
+</navbar>
+<%= render "form", category: @category %>
+
+
+  
